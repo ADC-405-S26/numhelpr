@@ -7,3 +7,4 @@
 ^numhelpr\.Rcheck$
 ^numhelpr.*\.tar\.gz$
 ^numhelpr.*\.tgz$
+^data-raw$
