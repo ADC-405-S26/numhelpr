@@ -1,0 +1,76 @@
+# numhelpr
+
+`numhelpr` is an R package that provides simple helper functions for
+common number formatting and math tasks that can be annoying to do in
+base R.
+
+## Installation
+
+You can install the development version of `numhelpr` from GitHub with:
+
+``` r
+
+remotes::install_github("ADC-405-S26/numhelpr")
+```
+
+## Functions
+
+### `percent()`
+
+Converts a decimal value into a formatted percentage string.
+
+``` r
+
+library(numhelpr)
+percent(0.753)
+percent(c(0.1, 0.25, 0.873))
+```
+
+### `percent_change()`
+
+Calculates the percentage change between two values.
+
+``` r
+
+percent_change(10, 12.5)
+percent_change(c(10, 25, 5), c(12.5, 22, 5.75))
+```
+
+### `clamp()`
+
+Restricts numeric values to a specified range.
+
+``` r
+
+clamp(c(1, 5, 10, 15, 20), lower = 5, upper = 15)
+```
+
+## Data
+
+The package includes a built-in dataset `sales_data` that can be used to
+practice the functions.
+
+``` r
+
+sales_data
+```
+
+# Package index
+
+## All functions
+
+- [`clamp()`](https://adc-405-s26.github.io/numhelpr/reference/clamp.md)
+  : Clamp Numeric Values Between a Minimum and Maximum
+- [`percent()`](https://adc-405-s26.github.io/numhelpr/reference/percent.md)
+  : Format a Decimal as a Percentage
+- [`percent_change()`](https://adc-405-s26.github.io/numhelpr/reference/percent_change.md)
+  : Calculate Percent Change Between Two Values
+- [`sales_data`](https://adc-405-s26.github.io/numhelpr/reference/sales_data.md)
+  : Sales Data for numhelpr Examples
+
+# Articles
+
+### All vignettes
+
+- [Introduction to
+  numhelpr](https://adc-405-s26.github.io/numhelpr/articles/intro-to-numhelpr.md):
