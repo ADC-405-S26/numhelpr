@@ -1,0 +1,65 @@
+---
+title: "Introduction to numhelpr"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Introduction to numhelpr}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(numhelpr)
+```
+## Why numhelpr?
+Working with numbers in R often requires writing the same small formulas over and over again. `numhelpr` solves three of the most common annoyances.
+
+- Formatting decimals as percentages 
+- Calculating percent change between two values
+- Clamping values within a specified range
+
+## The Dataset 
+
+We will use the built-in `sales_data` dataset to demonstrate each function. 
+
+```{r}
+sales_data
+```
+## `percent()`
+
+Converting a decimal rating to a readable percentage normally requires multiplying by 100 and pasting a `%` sign. `percent()` does this in one step. 
+
+```{r}
+percent(sales_data$rating)
+```
+
+You can also control the number of decimal places:
+
+```{r}
+percent(sales_data$rating, digits = 2)
+```
+## `percent_change()`
+
+Calculating percent change between old and new prices normally requires writing out the formula every time. `percent_change()` handles this cleanly. 
+
+```{r}
+percent_change(sales_data$price_old, sales_data$price_new)
+```
+
+Positive values indicate a price increase, negative values a decrease. 
+
+## `clamp()`
+
+Sometimes raw scores need to be restricted to a valid range. `clamp()` caps values between a lower and upper bound. 
+
+```{r}
+clamp(sales_data$raw_score, lower = 0, upper = 2)
+```
+
+Any values below 0 is set to 0, and any value above 2 is set to 2. 
