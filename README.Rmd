@@ -1,52 +1,51 @@
+---
+output: github_document
+---
 
 # numhelpr
 
-`numhelpr` is an R package that provides simple helper functions for
-common number formatting and math tasks that can be annoying to do in
-base R.
+`numhelpr` is an R package that provides simple helper functions for common 
+number formatting and math tasks that can be annoying to do in base R.
 
 ## Installation
 
 You can install the development version of `numhelpr` from GitHub with:
 
-``` r
+```r
 remotes::install_github("ADC-405-S26/numhelpr")
 ```
 
 ## Functions
 
 ### `percent()`
-
 Converts a decimal value into a formatted percentage string.
 
-``` r
+```r
 library(numhelpr)
 percent(0.753)
 percent(c(0.1, 0.25, 0.873))
 ```
 
 ### `percent_change()`
-
 Calculates the percentage change between two values.
 
-``` r
+```r
 percent_change(10, 12.5)
 percent_change(c(10, 25, 5), c(12.5, 22, 5.75))
 ```
 
 ### `clamp()`
-
 Restricts numeric values to a specified range.
 
-``` r
+```r
 clamp(c(1, 5, 10, 15, 20), lower = 5, upper = 15)
 ```
 
 ## Data
 
-The package includes a built-in dataset `sales_data` that can be used to
-practice the functions.
+The package includes a built-in dataset `sales_data` that can be used 
+to practice the functions.
 
-``` r
+```r
 sales_data
 ```

@@ -8,3 +8,4 @@
 ^numhelpr.*\.tar\.gz$
 ^numhelpr.*\.tgz$
 ^data-raw$
+^README\.Rmd$
