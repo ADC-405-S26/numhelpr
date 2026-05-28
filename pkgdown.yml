@@ -3,7 +3,7 @@ pkgdown: 2.2.0
 pkgdown_sha: ~
 articles:
   intro-to-numhelpr: intro-to-numhelpr.html
-last_built: 2026-05-26T21:19Z
+last_built: 2026-05-28T21:54Z
 urls:
   reference: https://adc-405-s26.github.io/numhelpr/reference
   article: https://adc-405-s26.github.io/numhelpr/articles

@@ -13,11 +13,12 @@ percent_change(old, new)
 
 - old:
 
-  A numeric vector of starting values.
+  A numeric vector of starting values. Cannot contain zeros as this
+  would result in division by zero.
 
 - new:
 
-  A numeric vector of ending values.
+  A numeric vector of ending values. Must be the same length as `old`.
 
 ## Value
 
