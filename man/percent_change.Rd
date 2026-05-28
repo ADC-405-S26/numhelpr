@@ -7,16 +7,19 @@
 percent_change(old, new)
 }
 \arguments{
-\item{old}{A numeric vector of starting values.}
+\item{old}{A numeric vector of starting values. Cannot contain zeros
+as this would result in division by zero.}
 
-\item{new}{A numeric vector of ending values.}
+\item{new}{A numeric vector of ending values. Must be the same length
+as \code{old}.}
 }
 \value{
 A numeric vector of percent changes.
 }
 \description{
 Calculates the percentage change from an old value to a new value.
-This is a convenient alternative to writing the formula manually every time.
+This is a convenient alternative to writing the formula manually
+every time.
 }
 \examples{
 percent_change(10, 12.5)
